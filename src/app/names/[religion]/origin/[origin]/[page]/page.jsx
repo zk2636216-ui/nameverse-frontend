@@ -1,3 +1,4 @@
+
 // src/app/names/origins/[origin]/[page]/page.jsx
 import Link from 'next/link';
 import { fetchNamesWithAdvancedFilters } from '@/lib/api/names';
@@ -9,8 +10,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nameverse.vercel.a
 const VALID_RELIGIONS = ['islamic', 'christian', 'hindu'];
 const STATIC_ORIGINS = ['arabic', 'persian', 'turkish', 'indian', 'english', 'other'];
 
-// Force dynamic rendering to avoid static page caching
-export const dynamic = 'force-dynamic';
+// ISR with 30-day cache - name origins rarely change
+export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
 
 function resolveOrigin(origin, availableOrigins) {

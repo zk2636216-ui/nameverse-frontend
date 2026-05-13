@@ -14,8 +14,8 @@ const RELIGION_LABELS = {
   hindu: 'Hindu',
 };
 
-// Force dynamic rendering to avoid static page caching
-export const dynamic = 'force-dynamic';
+// ISR with 30-day cache - name lists rarely change
+export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
 
 // Site URL (use public env var on client-safe code paths)

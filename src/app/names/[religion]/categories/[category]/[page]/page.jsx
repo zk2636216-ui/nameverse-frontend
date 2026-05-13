@@ -10,8 +10,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nameverse.vercel.a
 const VALID_RELIGIONS = ['islamic', 'christian', 'hindu'];
 const STATIC_CATEGORIES = ['modern', 'traditional', 'nature', 'religious', 'classical', 'unique'];
 
-// Force dynamic rendering to avoid static page caching
-export const dynamic = 'force-dynamic';
+// ISR with 30-day cache - name categories rarely change
+export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
 
 function normalizeReligion(religion) {

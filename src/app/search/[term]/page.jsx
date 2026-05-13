@@ -3,8 +3,8 @@ import { validateMetaTitle, validateMetaDescription } from '@/lib/seo/meta-helpe
 
 const DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://nameverse.vercel.app';
 
-// Force dynamic rendering to avoid static page caching
-export const dynamic = 'force-dynamic';
+// ISR with 1-hour cache for search results - popular terms get cached
+export const revalidate = 2592000; // 1 hour
 export const dynamicParams = true;
 
 // ---------------- Metadata ----------------
