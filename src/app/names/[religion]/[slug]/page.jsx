@@ -3,10 +3,13 @@ import { getSiteUrl } from '@/lib/seo/site';
 import { generateNamePageMetadata, generateNamePageSchemas } from '@/lib/seo/name-page-seo';
 import NameDetail from '@/components/name/NameDetail';
 import Script from 'next/script';
+import { headers } from 'next/headers';
 
 // ISR with 30-day cache — name data rarely changes
 export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
+
+// Force static generation for this route
 export const dynamic = 'force-static';
 
 const VALID_RELIGIONS = ['islamic', 'christian', 'hindu'];
