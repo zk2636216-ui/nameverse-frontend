@@ -82,13 +82,14 @@ const nextConfig = {
           },
         ],
       },
-      // Next.js data should not be cached
+      // Next.js data - allow ISR caching with stale-while-revalidate
+      // This enables Next.js to serve cached JSON data while revalidating in background
       {
         source: '/_next/data/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-store, max-age=0, must-revalidate',
+            value: 'public, max-age=0, stale-while-revalidate=2592000',
           },
         ],
       },
@@ -123,7 +124,7 @@ const nextConfig = {
     ];
   },
 
-  // Rewrites for API proxy and image fallbacks
+  // Rewrites for image fallbacks only (API rewrites removed to enable proper caching)
   async rewrites() {
     return [
       {
@@ -134,11 +135,8 @@ const nextConfig = {
         source: '/images/articles/:path*',
         destination: '/logo.png',
       },
-      // Proxy API requests to backend
-      {
-        source: '/api/:path*',
-        destination: `${API_BASE}/:path*`,
-      },
+      // NOTE: API rewrites removed - they were bypassing Next.js caching
+      // All API calls now use native fetch() with next.revalidate for proper ISR
     ];
   },
 

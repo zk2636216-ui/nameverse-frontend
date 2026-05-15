@@ -1,65 +1,15 @@
 import { notFound } from 'next/navigation';
 import { getSiteUrl } from '@/lib/seo/site';
 import { generateNamePageMetadata, generateNamePageSchemas } from '@/lib/seo/name-page-seo';
+import { serverFetchNameDetail } from '@/lib/api/server-fetch';
 import NameDetail from '@/components/name/NameDetail';
 import Script from 'next/script';
-import { headers } from 'next/headers';
 
 // ISR with 30-day cache — name data rarely changes
 export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
 
-// Force static generation for this route
-export const dynamic = 'force-static';
-
 const VALID_RELIGIONS = ['islamic', 'christian', 'hindu'];
-const API_BASE = (process.env.NEXT_PUBLIC_API_BASE || 'https://name-meaning-site-backend.vercel.app').replace(/\/+$/, '');
-
-/**
- * Server-side fetch using native fetch() with ISR revalidation
- * This is CRITICAL: using native fetch with next.revalidate tells Next.js
- * this data can be cached, enabling ISR (instead of making the route dynamic)
- */
-async function fetchNameDetailSSR(religion, slug) {
-  if (!religion || !slug) return null;
-
-  const normalizedReligion = religion.toLowerCase();
-  const safeSlug = encodeURIComponent(String(slug).trim().toLowerCase());
-
-  try {
-    const res = await fetch(`${API_BASE}/api/v1/names/${normalizedReligion}/${safeSlug}`, {
-      next: { revalidate: 2592000 }, // 30 days — enables ISR caching
-    });
-
-    if (!res.ok) {
-      // Try legacy endpoint as fallback
-      const fallbackRes = await fetch(`${API_BASE}/api/names/${normalizedReligion}/${safeSlug}`, {
-        next: { revalidate: 2592000 },
-      });
-      if (!fallbackRes.ok) return null;
-      const fallbackData = await fallbackRes.json();
-      if (fallbackData.success && fallbackData.data) return fallbackData.data;
-      return null;
-    }
-
-    const data = await res.json();
-    if (data.success && data.data) {
-      const nameData = data.data;
-      // Normalize religion
-      if (nameData.religion) {
-        const r = nameData.religion.toLowerCase();
-        if (r === 'islamic' || r === 'muslim') nameData.religion = 'islamic';
-        else if (r === 'christianity' || r === 'christian') nameData.religion = 'christian';
-        else if (r === 'hinduism' || r === 'hindu') nameData.religion = 'hindu';
-      }
-      return nameData;
-    }
-
-    return null;
-  } catch (error) {
-    return null;
-  }
-}
 
 function normalizeSlug(slug) {
   if (!slug || typeof slug !== 'string') return null;
@@ -79,7 +29,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const nameData = await fetchNameDetailSSR(religion, slug);
+  const nameData = await serverFetchNameDetail(religion, slug);
   if (!nameData) {
     return {
       title: 'Name Not Found | NameVerse',
@@ -111,7 +61,7 @@ export default async function NameDetailPage({ params }) {
     return notFound();
   }
 
-  const nameData = await fetchNameDetailSSR(religion, slug);
+  const nameData = await serverFetchNameDetail(religion, slug);
   if (!nameData) {
     return notFound();
   }

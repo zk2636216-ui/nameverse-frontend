@@ -98,9 +98,9 @@ export default function SearchResultsClient({
 
       try {
         const params = new URLSearchParams({ q: searchTerm.trim(), limit: '20' });
+        // Use default caching to allow browser/CDN caching of search results
         const response = await fetch(`${apiBase}/api/v1/names/search?${params.toString()}`, {
           signal: source,
-          cache: 'no-store',
         });
         const payload = await response.json();
         const results = payload.data || payload.results || [];
