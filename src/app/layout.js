@@ -200,6 +200,14 @@ export default function RootLayout({ children }) {
             items: [],
           }}
         />
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1510675468129183"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         {/* Ahrefs analytics script */}
         <Script
           src="https://analytics.ahrefs.com/analytics.js"

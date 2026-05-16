@@ -3,8 +3,8 @@ import { validateMetaTitle, validateMetaDescription } from '@/lib/seo/meta-helpe
 
 const DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://nameverse.vercel.app';
 
-// ISR with 1-hour cache for search results - popular terms get cached
-export const revalidate = 2592000; // 1 hour
+// ISR with 30-day cache for search results - popular terms get cached
+export const revalidate = 2592000; // 30 days
 export const dynamicParams = true;
 
 // ---------------- Metadata ----------------
