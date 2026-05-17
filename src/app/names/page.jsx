@@ -465,11 +465,23 @@ export default function CategoryButtons() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                "mainEntity": faqs.map(f => ({
-                  "@type": "Question",
-                  "name": f.q,
-                  "acceptedAnswer": { "@type": "Answer", "text": f.a }
-                }))
+                "mainEntity": faqs.map(f => {
+                  const publishedDate = new Date().toISOString().split('T')[0];
+                  return {
+                    "@type": "Question",
+                    "name": f.q,
+                    "datePublished": publishedDate,
+                    "author": { "@type": "Organization", "name": "NameVerse" },
+                    "answerCount": 1,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": f.a,
+                      "datePublished": publishedDate,
+                      "upvoteCount": 0,
+                      "author": { "@type": "Organization", "name": "NameVerse" }
+                    }
+                  };
+                })
               })
             }}
           />

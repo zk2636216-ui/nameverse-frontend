@@ -55,6 +55,7 @@ function generateStructuredData(names) {
     description: `${n.name} means "${n.meaning}" - ${n.origin} origin`
   }));
 
+  const publishedDateForFaq = new Date().toISOString().split('T')[0];
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -90,25 +91,46 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Islamic girl names?",
+            "answerCount": 1,
+            "datePublished": publishedDateForFaq,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" },
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Islamic girl names include Fatima, Aisha, Khadija, Maryam, Zainab, Amina, Hafsa, Safiyyah, Asiya, Noor, Zahra, Layla, Hana, Rania, Salma, Nadia, Amira, Huda, Sabreen, and Reem. These names have deep roots in Islamic history and Arabic tradition."
+              "text": "The most popular Islamic girl names include Fatima, Aisha, Khadija, Maryam, Zainab, Amina, Hafsa, Safiyyah, Asiya, Noor, Zahra, Layla, Hana, Rania, Salma, Nadia, Amira, Huda, Sabreen, and Reem. These names have deep roots in Islamic history and Arabic tradition.",
+              "datePublished": publishedDateForFaq,
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose an Islamic name for my baby girl?",
+            "answerCount": 1,
+            "datePublished": publishedDateForFaq,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" },
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing an Islamic name for your baby girl, consider the Arabic meaning, origin, and whether it has Quranic reference. Names with positive meanings like 'Pure', 'Light', 'Merciful', or 'Beloved' are highly recommended in Islamic tradition."
+              "text": "When choosing an Islamic name for your baby girl, consider the Arabic meaning, origin, and whether it has Quranic reference. Names with positive meanings like 'Pure', 'Light', 'Merciful', or 'Beloved' are highly recommended in Islamic tradition.",
+              "datePublished": publishedDateForFaq,
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Islamic girl names mean 'Light'?",
+            "answerCount": 1,
+            "datePublished": publishedDateForFaq,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" },
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Islamic girl names carry the meaning 'Light', including Noor, Sana, and Munira. These names express radiance and divine blessings in Islamic tradition and are beloved choices among Muslim families."
+              "text": "Several Islamic girl names carry the meaning 'Light', including Noor, Sana, and Munira. These names express radiance and divine blessings in Islamic tradition and are beloved choices among Muslim families.",
+              "datePublished": publishedDateForFaq,
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

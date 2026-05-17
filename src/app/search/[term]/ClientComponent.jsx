@@ -32,6 +32,7 @@ export default function SearchResultsClient({
   const displayNames = names;
 
   // SEO Schemas
+  const publishedDate = new Date().toISOString().split('T')[0];
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -39,25 +40,43 @@ export default function SearchResultsClient({
       {
         "@type": "Question",
         "name": `What is the meaning and etymology behind names in ${searchTerm}?`,
+        "datePublished": publishedDate,
+        "author": { "@type": "Organization", "name": "NameVerse" },
+        "answerCount": 1,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most names here present linguistic roots, cultural context, and how they have been used or changed through history and modern usage."
+          "text": "Most names here present linguistic roots, cultural context, and how they have been used or changed through history and modern usage.",
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" }
         }
       },
       {
         "@type": "Question",
         "name": "How can knowing a name's origin enhance my understanding?",
+        "datePublished": publishedDate,
+        "author": { "@type": "Organization", "name": "NameVerse" },
+        "answerCount": 1,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Many names trace back to fascinating origins—learning their background can reveal cultural shifts, religious significance, and how traditions spread across regions."
+          "text": "Many names trace back to fascinating origins—learning their background can reveal cultural shifts, religious significance, and how traditions spread across regions.",
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" }
         }
       },
       {
         "@type": "Question",
         "name": `Can I find detailed information about ${searchTerm}?`,
+        "datePublished": publishedDate,
+        "author": { "@type": "Organization", "name": "NameVerse" },
+        "answerCount": 1,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": `Yes, you'll find comprehensive meanings, origins, and cultural context for names related to "${searchTerm}".`
+          "text": `Yes, you'll find comprehensive meanings, origins, and cultural context for names related to "${searchTerm}".`,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" }
         }
       }
     ]

@@ -90,25 +90,43 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Christian boy names?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Christian boy names include Noah, Elijah, James, Benjamin, Michael, Daniel, Jacob, Samuel, Joseph, David, Matthew, and Gabriel. These names have deep roots in the Bible and Christian tradition."
+              "text": "The most popular Christian boy names include Noah, Elijah, James, Benjamin, Michael, Daniel, Jacob, Samuel, Joseph, David, Matthew, and Gabriel. These names have deep roots in the Bible and Christian tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose a Christian name for my baby boy?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing a Christian name for your baby boy, consider the Biblical meaning, origin, and whether it has a connection to scripture. Names with positive meanings like 'God is gracious', 'Gift of God', or 'God is my strength' are highly recommended in Christian tradition."
+              "text": "When choosing a Christian name for your baby boy, consider the Biblical meaning, origin, and whether it has a connection to scripture. Names with positive meanings like 'God is gracious', 'Gift of God', or 'God is my strength' are highly recommended in Christian tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Christian boy names mean 'Gift from God'?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Christian boy names carry the meaning 'Gift from God', including Matthew, Theodore, Nathan, and Mateo. These names express gratitude for the blessing of a child."
+              "text": "Several Christian boy names carry the meaning 'Gift from God', including Matthew, Theodore, Nathan, and Mateo. These names express gratitude for the blessing of a child.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

@@ -90,25 +90,43 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Hindu girl names?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Hindu girl names include Aadhya, Aahana, Aanya, Aaradhya, Aarohi, Aarushi, Aashi, Aastha, Aditi, Advika, Ananya, Anika, Anvi, Aria, Avani, Diya, Gauri, Ishani, Jiya, Kavya, Kiara, Myra, Nisha, Pari, Prisha, Riya, Saanvi, Sara, Shanvi, Siya, Tara, and Vanya. These names have deep roots in Sanskrit and Hindu tradition."
+              "text": "The most popular Hindu girl names include Aadhya, Aahana, Aanya, Aaradhya, Aarohi, Aarushi, Aashi, Aastha, Aditi, Advika, Ananya, Anika, Anvi, Aria, Avani, Diya, Gauri, Ishani, Jiya, Kavya, Kiara, Myra, Nisha, Pari, Prisha, Riya, Saanvi, Sara, Shanvi, Siya, Tara, and Vanya. These names have deep roots in Sanskrit and Hindu tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose a Hindu name for my baby girl?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing a Hindu name for your baby girl, consider the Sanskrit meaning, origin, and whether it has a connection to Hindu goddesses or Vedas. Names with positive meanings like 'Goddess Lakshmi', 'Dawn', 'Grace', or 'Worshipped' are highly recommended in Hindu tradition."
+              "text": "When choosing a Hindu name for your baby girl, consider the Sanskrit meaning, origin, and whether it has a connection to Hindu goddesses or Vedas. Names with positive meanings like 'Goddess Lakshmi', 'Dawn', 'Grace', or 'Worshipped' are highly recommended in Hindu tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Hindu girl names mean 'Goddess Lakshmi'?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Hindu girl names carry the meaning 'Goddess Lakshmi', including Aaditri, Lakshmi, Padma, Kamala, and Shri. These names express prosperity and divine blessings in Hindu tradition and are beloved choices among Indian families."
+              "text": "Several Hindu girl names carry the meaning 'Goddess Lakshmi', including Aaditri, Lakshmi, Padma, Kamala, and Shri. These names express prosperity and divine blessings in Hindu tradition and are beloved choices among Indian families.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

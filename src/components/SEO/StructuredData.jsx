@@ -92,15 +92,28 @@ export default function StructuredData({
   }
 
   if (faq && Array.isArray(faq) && faq.length > 0) {
+    const publishedDate = new Date().toISOString().split('T')[0];
     schemas.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": faq.map((q, idx) => ({
         "@type": "Question",
         "name": q.question,
+        "datePublished": publishedDate,
+        "author": {
+          "@type": "Organization",
+          "name": "NameVerse"
+        },
+        "answerCount": 1,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": q.answer
+          "text": q.answer,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": {
+            "@type": "Organization",
+            "name": "NameVerse"
+          }
         }
       }))
     });

@@ -90,25 +90,43 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Christian girl names?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Christian girl names include Isabella, Abigail, Elizabeth, Hannah, Grace, Chloe, Leah, Naomi, Sarah, Eva, Genesis, Eliana, Anna, Gabriella, Lydia, Julia, Delilah, Josephine, and Madeline. These names have deep roots in the Bible and Christian tradition."
+              "text": "The most popular Christian girl names include Isabella, Abigail, Elizabeth, Hannah, Grace, Chloe, Leah, Naomi, Sarah, Eva, Genesis, Eliana, Anna, Gabriella, Lydia, Julia, Delilah, Josephine, and Madeline. These names have deep roots in the Bible and Christian tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose a Christian name for my baby girl?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing a Christian name for your baby girl, consider the Biblical meaning, origin, and whether it has a connection to scripture. Names with positive meanings like 'Grace of God', 'God is my oath', or 'Father's joy' are highly recommended in Christian tradition."
+              "text": "When choosing a Christian name for your baby girl, consider the Biblical meaning, origin, and whether it has a connection to scripture. Names with positive meanings like 'Grace of God', 'God is my oath', or 'Father's joy' are highly recommended in Christian tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Christian girl names mean 'Grace of God'?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Christian girl names carry the meaning related to grace, including Grace, Hannah, and Anna. These names express gratitude for God's grace and blessings."
+              "text": "Several Christian girl names carry the meaning related to grace, including Grace, Hannah, and Anna. These names express gratitude for God's grace and blessings.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

@@ -107,7 +107,9 @@ export function generateOptimizedTitle(data, religion) {
                           religion === 'hindu' ? 'Hindu' : religion;
   const genderPhrase = genderLabel ? `${genderLabel} ` : '';
 
-  const title = `${name} ${religionDisplay} ${genderPhrase}Name Meaning | Origin, Lucky Number, Pronunciation & Personality`;
+  // Shorter title to fit 60-char Bing/SEO limit
+  // "Muhammad Islamic Boy Name Meaning" = 34 chars
+  const title = `${name} ${religionDisplay} ${genderPhrase}Name Meaning`;
 
   return validateMetaTitle(title);
 }
@@ -322,7 +324,22 @@ export function generateOptimizedSchemas(data, religion, slug) {
     "mainEntity": faqItems.map((item) => ({
       "@type": "Question",
       "name": item.q,
-      "acceptedAnswer": { "@type": "Answer", "text": item.a },
+      "datePublished": publishedDate,
+      "author": {
+        "@type": "Organization",
+        "name": "NameVerse"
+      },
+      "answerCount": 1,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a,
+        "datePublished": publishedDate,
+        "upvoteCount": 0,
+        "author": {
+          "@type": "Organization",
+          "name": "NameVerse"
+        }
+      },
     })),
   };
 

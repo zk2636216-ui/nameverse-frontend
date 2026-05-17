@@ -23,6 +23,8 @@ try {
 } catch (error) {
 }
 
+const publishedDate = new Date().toISOString().split('T')[0];
+
 const homepageStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -72,33 +74,61 @@ const homepageStructuredData = {
         {
           "@type": "Question",
           "name": "What is NameVerse and how does it help find baby names?",
+          "answerCount": 1,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" },
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NameVerse is the world's most comprehensive baby name platform with 65,000+ verified names from Islamic, Christian, and Hindu traditions. You can search by religion, gender, starting letter, origin, and meaning to find the perfect name with authentic meanings and 2026 trending data."
+            "text": "NameVerse is the world's most comprehensive baby name platform with 65,000+ verified names from Islamic, Christian, and Hindu traditions. You can search by religion, gender, starting letter, origin, and meaning to find the perfect name with authentic meanings and 2026 trending data.",
+            "datePublished": publishedDate,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" }
           }
         },
         {
           "@type": "Question",
           "name": "What are the best baby names in 2026?",
+          "answerCount": 1,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" },
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Top trending baby names in 2026 include Muhammad, Rayan, Ayan, and Zayn (Islamic), Liam, Noah, Elijah, and Ezra (Christian), and Vihaan, Arjun, Ananya, and Diya (Hindu). NameVerse tracks real-time popularity across all traditions."
+            "text": "Top trending baby names in 2026 include Muhammad, Rayan, Ayan, and Zayn (Islamic), Liam, Noah, Elijah, and Ezra (Christian), and Vihaan, Arjun, Ananya, and Diya (Hindu). NameVerse tracks real-time popularity across all traditions.",
+            "datePublished": publishedDate,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" }
           }
         },
         {
           "@type": "Question",
           "name": "Are NameVerse name meanings verified and accurate?",
+          "answerCount": 1,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" },
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, NameVerse verifies Islamic names against Quranic text and classical Arabic dictionaries, Christian names against Biblical concordances, and Hindu names against Sanskrit etymological references with a 98% verification accuracy rate."
+            "text": "Yes, NameVerse verifies Islamic names against Quranic text and classical Arabic dictionaries, Christian names against Biblical concordances, and Hindu names against Sanskrit etymological references with a 98% verification accuracy rate.",
+            "datePublished": publishedDate,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" }
           }
         },
         {
           "@type": "Question",
           "name": "How do I search baby names by religion on NameVerse?",
+          "answerCount": 1,
+          "datePublished": publishedDate,
+          "upvoteCount": 0,
+          "author": { "@type": "Organization", "name": "NameVerse" },
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can browse 18,000+ Islamic Quranic names, 11,000+ Christian Biblical names, and 15,000+ Hindu Sanskrit names A–Z. Each section allows filtering by boy/girl, starting letter, origin, and meaning with lucky numbers and trending data."
+            "text": "You can browse 18,000+ Islamic Quranic names, 11,000+ Christian Biblical names, and 15,000+ Hindu Sanskrit names A–Z. Each section allows filtering by boy/girl, starting letter, origin, and meaning with lucky numbers and trending data.",
+            "datePublished": publishedDate,
+            "upvoteCount": 0,
+            "author": { "@type": "Organization", "name": "NameVerse" }
           }
         }
       ]
@@ -116,12 +146,6 @@ const homepageStructuredData = {
     }
   ]
 };
-
-
-
-
-
-
 
 // ============================================================
 // GSC #1 RANKING: "NameVerse" brand keyword dominance strategy

@@ -72,15 +72,28 @@ export async function generateMetadata({ params }) {
 
 // FAQ Schema Component
 function FAQSchema({ faqs }) {
+  const publishedDate = new Date().toISOString().split('T')[0];
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
+      "datePublished": publishedDate,
+      "author": {
+        "@type": "Organization",
+        "name": "NameVerse"
+      },
+      "answerCount": 1,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.answer
+        "text": faq.answer,
+        "datePublished": publishedDate,
+        "upvoteCount": 0,
+        "author": {
+          "@type": "Organization",
+          "name": "NameVerse"
+        }
       }
     }))
   };

@@ -90,25 +90,43 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Hindu boy names?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Hindu boy names include Aarav, Aarush, Aayush, Abhay, Abhinav, Aditya, Akash, Aryan, Dhruv, Ishan, Kabir, Krish, Laksh, Mohan, Neel, Om, Pranav, Reyansh, Rudra, Shaurya, Shiv, Vihaan, and Yuvan. These names have deep roots in Sanskrit and Hindu tradition."
+              "text": "The most popular Hindu boy names include Aarav, Aarush, Aayush, Abhay, Abhinav, Aditya, Akash, Aryan, Dhruv, Ishan, Kabir, Krish, Laksh, Mohan, Neel, Om, Pranav, Reyansh, Rudra, Shaurya, Shiv, Vihaan, and Yuvan. These names have deep roots in Sanskrit and Hindu tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose a Hindu name for my baby boy?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing a Hindu name for your baby boy, consider the Sanskrit meaning, origin, and whether it has a connection to Hindu mythology or Vedas. Names with positive meanings like 'Peaceful', 'Sun', 'Sky', or 'Fearless' are highly recommended in Hindu tradition."
+              "text": "When choosing a Hindu name for your baby boy, consider the Sanskrit meaning, origin, and whether it has a connection to Hindu mythology or Vedas. Names with positive meanings like 'Peaceful', 'Sun', 'Sky', or 'Fearless' are highly recommended in Hindu tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Hindu boy names mean 'Sun'?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Hindu boy names carry the meaning 'Sun', including Aadavan, Aadhav, Aadhavan, Aadith, Aarav, Aarush, and Aaru. These names express brightness and vitality in Hindu tradition."
+              "text": "Several Hindu boy names carry the meaning 'Sun', including Aadavan, Aadhav, Aadhavan, Aadith, Aarav, Aarush, and Aaru. These names express brightness and vitality in Hindu tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

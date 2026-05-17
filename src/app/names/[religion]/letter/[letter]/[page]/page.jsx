@@ -181,15 +181,22 @@ function FAQSection({ religion, letter, totalCount, faqData }) {
         },
       ];
 
+  const publishedDate = new Date().toISOString().split('T')[0];
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
+      datePublished: publishedDate,
+      author: { '@type': 'Organization', 'name': 'NameVerse' },
+      answerCount: 1,
       acceptedAnswer: {
         '@type': 'Answer',
         text: faq.answer,
+        datePublished: publishedDate,
+        upvoteCount: 0,
+        author: { '@type': 'Organization', 'name': 'NameVerse' },
       },
     })),
   };

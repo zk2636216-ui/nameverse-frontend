@@ -171,12 +171,17 @@ export default function Meaning({ data }) {
           </div>
 
           <div className="space-y-4">
-            {data.historical_references.map((item, idx) => (
-              <div key={idx} className="rounded-3xl border border-slate-100 bg-slate-50 p-4">
-                <p className="text-sm leading-6 text-slate-700">{item.reference}</p>
-                {item.time_period && <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">{item.time_period}</p>}
-              </div>
-            ))}
+            {data.historical_references.map((item, idx) => {
+              // Handle different API shapes: {reference, time_period} or {name, profession, country, notes} or plain strings
+              const refText = item.reference || item.notes || (typeof item === 'string' ? item : '');
+              const refPeriod = item.time_period || '';
+              return (
+                <div key={idx} className="rounded-3xl border border-slate-100 bg-slate-50 p-4">
+                  <p className="text-sm leading-6 text-slate-700">{refText}</p>
+                  {refPeriod && <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">{refPeriod}</p>}
+                </div>
+              );
+            })}
           </div>
         </section>
       )}

@@ -90,25 +90,43 @@ function generateStructuredData(names) {
           {
             "@type": "Question",
             "name": "What are the most popular Islamic boy names?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The most popular Islamic boy names include Muhammad, Ahmad, Ali, Hassan, Hussain, Umar, Usman, Bilal, Yusuf, Ibrahim, Hamza, and Khalid. These names have deep roots in Islamic history and Arabic tradition."
+              "text": "The most popular Islamic boy names include Muhammad, Ahmad, Ali, Hassan, Hussain, Umar, Usman, Bilal, Yusuf, Ibrahim, Hamza, and Khalid. These names have deep roots in Islamic history and Arabic tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "How do I choose an Islamic name for my baby boy?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When choosing an Islamic name for your baby boy, consider the Arabic meaning, origin, and whether it has Quranic reference. Names with positive meanings like 'Praised', 'Wise', 'Merciful', or 'Eternal' are highly recommended in Islamic tradition."
+              "text": "When choosing an Islamic name for your baby boy, consider the Arabic meaning, origin, and whether it has Quranic reference. Names with positive meanings like 'Praised', 'Wise', 'Merciful', or 'Eternal' are highly recommended in Islamic tradition.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           },
           {
             "@type": "Question",
             "name": "What Islamic boy names mean 'Praised'?",
+            "datePublished": "2025-01-01",
+            "author": { "@type": "Organization", "name": "NameVerse" },
+            "answerCount": 1,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Several Islamic boy names carry the meaning 'Praised', including Muhammad and Ahmad. These names express gratitude and are beloved choices among Muslim families worldwide."
+              "text": "Several Islamic boy names carry the meaning 'Praised', including Muhammad and Ahmad. These names express gratitude and are beloved choices among Muslim families worldwide.",
+              "datePublished": "2025-01-01",
+              "upvoteCount": 0,
+              "author": { "@type": "Organization", "name": "NameVerse" }
             }
           }
         ]

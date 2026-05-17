@@ -111,8 +111,10 @@ export function generateArticleSchema(article) {
  * @param {Array} faqs - Array of {question, answer} objects
  * @returns {Object} FAQPage schema
  */
-export function generateFAQSchema(faqs) {
+export function generateFAQSchema(faqs, pageDate = null) {
   if (!faqs || faqs.length === 0) return null;
+  
+  const publishedDate = pageDate || new Date().toISOString().split('T')[0];
 
   return {
     '@context': 'https://schema.org',
@@ -120,9 +122,21 @@ export function generateFAQSchema(faqs) {
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       name: faq.question || faq.q,
+      datePublished: publishedDate,
+      author: {
+        '@type': 'Organization',
+        name: 'NameVerse'
+      },
+      answerCount: 1,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer || faq.a
+        text: faq.answer || faq.a,
+        datePublished: publishedDate,
+        upvoteCount: 0,
+        author: {
+          '@type': 'Organization',
+          name: 'NameVerse'
+        }
       }
     }))
   };
